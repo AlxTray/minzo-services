@@ -32,7 +32,7 @@ jobs:
           poetry-version: ${{ matrix.poetry-version }}
       - name: Install dependencies
         run: |
-          poetry install --sync --all-extras --with dev
+          poetry install --sync --all-extras --with dev,test,coverage
       - name: Lint with black
         run: |
           poetry run black ./src --check
